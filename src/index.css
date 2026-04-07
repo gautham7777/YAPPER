@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Work+Sans:wght@500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-[#FFE873] text-black font-sans antialiased selection:bg-black selection:text-[#FFE873];
+  background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Fun Neo-Brutalist Drop Cap */
+.rant-text::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  float: left;
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+  background-color: #FF3B30;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 4px solid black;
+  box-shadow: 4px 4px 0px black;
+  transform: rotate(-3deg);
+}
+
+/* Chunky Retro Range Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 28px;
+  width: 28px;
+  border: 4px solid black;
+  border-radius: 0;
+  background: #FF3B30;
+  cursor: pointer;
+  margin-top: -10px;
+  box-shadow: 4px 4px 0px black;
+  transition: all 0.1s;
+}
+input[type=range]::-webkit-slider-thumb:active {
+  box-shadow: 0px 0px 0px black;
+  transform: translate(4px, 4px);
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: white;
+  border: 3px solid black;
+}
+
+/* Chunky scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #FFE873;
+  border-left: 4px solid black;
+}
+::-webkit-scrollbar-thumb {
+  background: #4169E1;
+  border: 4px solid black;
+  border-right: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3B30;
+}
